@@ -15,14 +15,14 @@ License: New [BSD License](http://opensource.org/licenses/bsd-3-clause) (just li
 
 Rails: 3.2 and up
 
-`jquery-sparkline-rails` 2.1.1 includes `jquery.sparkline` 2.1.1
+`jquery-sparkline-rails` 2.1.2 includes `jquery.sparkline` 2.1.2
 
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'jquery-sparkline-rails', github: 'cubus/jquery-sparkline-rails'
+    gem 'jquery-sparkline-rails', github: 'AvaelKross/jquery-sparkline-rails'
 
 
 And then execute:
