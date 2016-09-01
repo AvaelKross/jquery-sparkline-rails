@@ -545,7 +545,7 @@
         if (p < num.length) {
             num[p] = decsep;
         }
-        shift = num[0] == '-' ? 1 : 0;
+        var shift = num[0] == '-' ? 1 : 0;
         for (i = p - groupsize; i > shift; i -= groupsize) {
             num.splice(i, 0, groupsep);
         }
