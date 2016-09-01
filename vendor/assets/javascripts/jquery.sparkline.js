@@ -1205,6 +1205,7 @@
         getCurrentRegionTooltip: function () {
             var options = this.options,
                 header = '',
+                custom_tooltip_text = '',
                 entries = [],
                 fields, formats, formatlen, fclass, text, i,
                 showFields, showFieldsKey, newFields, fv,
@@ -1253,10 +1254,13 @@
                 fclass = format.fclass || 'jqsfield';
                 for (j = 0; j < fieldlen; j++) {
                     if (!fields[j].isNull || !options.get('tooltipSkipNull')) {
+                        if (options.get('tooltipList')) {
+                            custom_tooltip_text = options.get('tooltipList')[fields[j]['offset']]
+                        }
                         $.extend(fields[j], {
                             prefix: options.get('tooltipPrefix'),
                             suffix: options.get('tooltipSuffix'),
-                            custom: options.get('tooltipList') ? options.get('tooltipList')[j] : ''
+                            custom: custom_tooltip_text
                         });
                         text = format.render(fields[j], options.get('tooltipValueLookups'), options);
                         entries.push('<div class="' + fclass + '">' + text + '</div>');
