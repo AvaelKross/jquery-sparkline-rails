@@ -1256,7 +1256,7 @@
                         $.extend(fields[j], {
                             prefix: options.get('tooltipPrefix'),
                             suffix: options.get('tooltipSuffix'),
-                            custom: options.get('tooltipList') ? '' : options.get('tooltipList')[j]
+                            custom: options.get('tooltipList') ? options.get('tooltipList')[j] : ''
                         });
                         text = format.render(fields[j], options.get('tooltipValueLookups'), options);
                         entries.push('<div class="' + fclass + '">' + text + '</div>');
